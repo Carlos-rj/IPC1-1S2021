@@ -4,17 +4,17 @@ _Fecha: 26/01/2021_
 
 ## Clase 1 - Horario de Laboratorio
 
-_El dia de hoy se dio una introduccion muy extensa de JAVA, puede ser mucho contenido para un primer dia, pero es lo *basico* que deben de saber para programar de aqui en adelante._
+_El dia de hoy se dio una introduccion muy extensa de JAVA, puede ser mucho contenido para un primer dia, pero es lo **basico** que deben de saber para programar de aqui en adelante._
 
 ### Contenido 📋
 
 - Declaracion de variables
 	- Tipos de Variables
-		- booleand: Verdadero/Falso
-		- char: Caracteres/ASCII
-		- int: Enteros
-		- double: Decimales
-		- String: cadenas
+		- booleand
+		- char
+		- int
+		- double
+		- String
 - Mostrar mensajes en consola
 - Leer datos desde la consola
 - Almacenar informacion en variables
