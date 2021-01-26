@@ -10,7 +10,7 @@ _El dia de hoy se dio una introduccion muy extensa de JAVA, puede ser mucho cont
 
 - Declaracion de variables
 	- Tipos de Variables
-		- booleand
+		- boolean
 		- char
 		- int
 		- double
