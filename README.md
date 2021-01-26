@@ -14,4 +14,6 @@ _La idea es que todos los ejemplos vistos en laboratorios sean subidos en este r
 
 ### Ultimas palabras
 - Usar con sabiduria este material :)
-- No solo copiar y pegar >:) traten de entender el codigo y averiguar como funciona
+- No solo copiar y pegar >:) 
+- Traten de entender el codigo y averiguar como funciona.
+- Sin miedo al exito, todo es posible si le echan ganas.
