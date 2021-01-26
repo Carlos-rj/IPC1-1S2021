@@ -1,16 +1,29 @@
 # Introduccion a la Programacion y Computacion 1
 
-_Este repositorio esta orientado a apoyar a los estudiantes de IPC1 para que no sientan que el curso es un martirio :)_
+_Fecha: 26/01/2021_
 
-## Comenzando 🚀
+## Clase 1 - Horario de Laboratorio
 
-_La idea es que todos los ejemplos vistos en laboratorios sean subidos en este repositorio y que tengan los comentarios suficientes para que vayan aprendiendo y aclarando sus dudas_
+_El dia de hoy se dio una introduccion muy extensa de JAVA, puede ser mucho contenido para un primer dia, pero es lo *basico* que deben de saber para programar de aqui en adelante._
 
-### Metodologia 📋
+### Contenido 📋
 
-- Se subira una carpeta por cada dia de laboratorio.
-- Dentro de cada carpeta encontraran un README para que sepan de que tratara la clase.
-- Se subira el codigo comentado y el codigo sin comentar.
-
-### Ultimas palabras
-- Usar con sabiduria este material :)
+- Declaracion de variables
+-- Tipos de Variables
+--- booleand: Verdadero/Falso
+--- char: Caracteres/ASCII
+--- int: Enteros
+--- double: Decimales
+--- String: cadenas
+- Mostrar mensajes en consola
+- Leer datos desde la consola
+- Almacenar informacion en variables
+- Sentencias
+-- Sentencias de Control
+--- If
+--- If-Else
+--- If-Else if-Else
+-- Bucles
+--- While
+--- Do-While
+--- For

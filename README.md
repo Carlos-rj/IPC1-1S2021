@@ -10,7 +10,8 @@ _La idea es que todos los ejemplos vistos en laboratorios sean subidos en este r
 
 - Se subira una carpeta por cada dia de laboratorio.
 - Dentro de cada carpeta encontraran un README para que sepan de que tratara la clase.
-- Se subira el codigo comentado y el codigo sin comentar.
+- Se subira el codigo comentado para que sea mas entendible el codigo
 
 ### Ultimas palabras
 - Usar con sabiduria este material :)
+- No solo copiar y pegar >:) traten de entender el codigo y averiguar como funciona
