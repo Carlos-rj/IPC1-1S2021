@@ -9,21 +9,21 @@ _El dia de hoy se dio una introduccion muy extensa de JAVA, puede ser mucho cont
 ### Contenido 📋
 
 - Declaracion de variables
--- Tipos de Variables
---- booleand: Verdadero/Falso
---- char: Caracteres/ASCII
---- int: Enteros
---- double: Decimales
---- String: cadenas
+	- Tipos de Variables
+		- booleand: Verdadero/Falso
+		- char: Caracteres/ASCII
+		- int: Enteros
+		- double: Decimales
+		- String: cadenas
 - Mostrar mensajes en consola
 - Leer datos desde la consola
 - Almacenar informacion en variables
 - Sentencias
--- Sentencias de Control
---- If
---- If-Else
---- If-Else if-Else
--- Bucles
---- While
---- Do-While
---- For
+	- Sentencias de Control
+		- If
+		- If-Else
+		- If-Else if-Else
+	- Bucles
+		- While
+		- Do-While
+		- For
