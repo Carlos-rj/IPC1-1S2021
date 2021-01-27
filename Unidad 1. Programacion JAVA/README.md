@@ -6,6 +6,8 @@ _Fecha: 26/01/2021_
 
 _El dia de hoy se dio una introduccion muy extensa de JAVA, puede ser mucho contenido para un primer dia, pero es lo **basico** que deben de saber para programar de aqui en adelante._
 
+**Grabacion de la clase: ** https://drive.google.com/file/d/1Hvaw2nNJq_onvcypm35gIlHVdD9QAyAm/view
+
 ### Contenido 📋
 
 - Declaracion de variables
@@ -29,6 +31,36 @@ _El dia de hoy se dio una introduccion muy extensa de JAVA, puede ser mucho cont
 		- For
 
 
-## Clase 1 - Laboratorio extra
+## Clase 2 - Laboratorio extra
 
-_Se dio una pequeña introduccion de GitHub, se esta a enseñando como bajar el codigo desde GitHub_
+_En el laboratorio extra se dio un repaso de las sentencias que vimos en la mañana y por ultimo empezamos a ver como es que funcionan las funciones y metodos, el concepto puede llegar a ser confuso si no se explica bien, con la practica se domina mejor este tema._
+
+
+**Grabacion de la clase: ** https://drive.google.com/file/d/14miCGO6KWy_X8b4DU6J88RlrWCLJDJZa/view?usp=sharing
+
+### Contenido 📋
+
+- Funciones
+	- Funciones con Parametros
+	- Funciones sin Parametros
+	- Como funciona el return
+- Metodos
+	- Metodos con Parametros
+	- Metodos sin Parametros
+	- Tipo void
+- Diferencia entre Funciones y Metodos
+- Explicacion de Excepciones
+
+## EjemploExtra
+
+_Tambien les adjunto un ejemplo de un menu, ya utilizando metodos y funciones de una forma mas "formal" sin tantas explicaciones y mas enfocado en las funcionalidades_
+
+En este ejemplo se utilizan los siguientes temas:
+- Funciones con parametros
+- Metodos con parametros
+- Metodos sin parametros
+- Sentencia Do-While
+- Sentencia For
+- Sentencia While
+- Explicacion del manejo de excepciones con Try-Catch
+
