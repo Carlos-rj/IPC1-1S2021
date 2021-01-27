@@ -27,3 +27,8 @@ _El dia de hoy se dio una introduccion muy extensa de JAVA, puede ser mucho cont
 		- While
 		- Do-While
 		- For
+
+
+## Clase 1 - Laboratorio extra
+
+_Se dio una pequeña introduccion de GitHub_
