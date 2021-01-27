@@ -6,7 +6,7 @@ _Fecha: 26/01/2021_
 
 _El dia de hoy se dio una introduccion muy extensa de JAVA, puede ser mucho contenido para un primer dia, pero es lo **basico** que deben de saber para programar de aqui en adelante._
 
-**Grabacion de la clase: ** https://drive.google.com/file/d/1Hvaw2nNJq_onvcypm35gIlHVdD9QAyAm/view
+**Grabacion de la clase:** https://drive.google.com/file/d/1Hvaw2nNJq_onvcypm35gIlHVdD9QAyAm/view
 
 ### Contenido 📋
 
@@ -36,7 +36,7 @@ _El dia de hoy se dio una introduccion muy extensa de JAVA, puede ser mucho cont
 _En el laboratorio extra se dio un repaso de las sentencias que vimos en la mañana y por ultimo empezamos a ver como es que funcionan las funciones y metodos, el concepto puede llegar a ser confuso si no se explica bien, con la practica se domina mejor este tema._
 
 
-**Grabacion de la clase: ** https://drive.google.com/file/d/14miCGO6KWy_X8b4DU6J88RlrWCLJDJZa/view?usp=sharing
+**Grabacion de la clase:** https://drive.google.com/file/d/14miCGO6KWy_X8b4DU6J88RlrWCLJDJZa/view?usp=sharing
 
 ### Contenido 📋
 
