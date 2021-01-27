@@ -31,4 +31,4 @@ _El dia de hoy se dio una introduccion muy extensa de JAVA, puede ser mucho cont
 
 ## Clase 1 - Laboratorio extra
 
-_Se dio una pequeña introduccion de GitHub_
+_Se dio una pequeña introduccion de GitHub, se esta a enseñando como bajar el codigo desde GitHub_
