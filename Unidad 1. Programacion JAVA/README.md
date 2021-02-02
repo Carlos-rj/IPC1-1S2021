@@ -64,3 +64,13 @@ En este ejemplo se utilizan los siguientes temas:
 - Sentencia While
 - Explicacion del manejo de excepciones con Try-Catch
 
+## EjemploDeNoche
+
+_Este ejemplo surgio por la resolucion de algunas dudas de los compañeros en una madrugada, tratando de explicar la funcionalidad de un try-catch y que pasa si llamamos metodos dentro de metodos_
+
+En este ejemplo se utilizan los siguientes temas:
+- Manejo de try-catch
+- Validaciones entre metodo 
+	- Con try-catch
+	- Con do-while
+- Explicacion de metodos dentro de metodos.
