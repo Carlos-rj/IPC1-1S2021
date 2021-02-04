@@ -1,0 +1,6 @@
+<HTML>
+<title> Reporte HTML </title>
+<body>
+<h1> HOLA ESTRELLITAS </h1>
+</body>
+</HTML>
