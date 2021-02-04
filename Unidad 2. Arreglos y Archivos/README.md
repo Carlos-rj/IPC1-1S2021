@@ -38,13 +38,13 @@ _En este laboratorio nos dimos la tarea de analizar los metodos encontrados en i
 ### Contenido 📋
 
 - Lectura de un Archivo
-	-Leer un archivo de texto.
-	-Leer un archivo de texto con varias lineas.
-	-Leer un archivo con la ruta puesta desde consola.
-	-Analizando el texto desde un archivo.
-	-Obteniendo informacion del archivo y guardarla en variables.
+	- Leer un archivo de texto.
+	- Leer un archivo de texto con varias lineas.
+	- Leer un archivo con la ruta puesta desde consola.
+	- Analizando el texto desde un archivo.
+	- Obteniendo informacion del archivo y guardarla en variables.
 - Escritura de un Archivo
-	-Crear un archivo.
-	-Escribir en un archivo.
-	-Escribir un reporte.
-	-Utilizar variables para el reporte.
+	- Crear un archivo.
+	- Escribir en un archivo.
+	- Escribir un reporte.
+	- Utilizar variables para el reporte.
