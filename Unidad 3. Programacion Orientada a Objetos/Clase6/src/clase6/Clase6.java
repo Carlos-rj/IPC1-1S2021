@@ -38,7 +38,7 @@ public class Clase6 {
             Y una clase puede tener muchos objetos, pero sus valores no son los mismos
         */
         
-        // OBJETOS CON EL CONTRUCTOR GENERICO
+        // OBJETOS CON EL CONTRUCTOR POR DEFECTO
         /*
             Cuando nosotros declaramos una clase, esta viene con una clase por defecto que no se "ve" pero si esta declarada
             este metodo es un Public Objeto() (Ver clase Persona)
@@ -53,55 +53,88 @@ public class Clase6 {
            Luego de crear un objeto, queremos darle un valor, entonces utilizamos el Encapsulamiento para cumplir con POO
            ver la clase Persona para la explicacion.
         */
+        
+        // Utilizamos los metodos Set para guardar la informacion, nos damos cuenta que mandamos como parametro
+        // el valor que queremos asignar en el atributo
         persona1.setNombre("Carlos");
         persona1.setEdad(22);
         persona1.setSexo('M');
         persona1.setCUI(2987);
+        
+        /* INTERPRETANDO DATOS
+         En este ejemplo tenemos un atributo llamado estado, este estado es para saber si estamos vivos o muertos
+         Si estamos vivos, se guarda True
+         Si estamos moridos, se guarda False
+         Pero nosotros no le preguntamos a alguien y nos dice "True" o "False"
+         Entonces interpretamos su respueta
+        */
+        
+        // PREGUNTAMOS EL ESTADO DE LA PERSONA
         System.out.print("¿Cual es tu estado actual?");
         String estado = sc.nextLine();
-        
-        // LOS STRING UTILIZAN EL METODO EQUALS PARA COMPARAR TEXTO
+        // Recordemos, si la respuesta es Morido -> entonces guardamos false
+        // si la respuesta no es Morido -> entonces guardamos true.
         if(estado.equals("Morido")){
             persona1.setEstado(false);
         }else{
             persona1.setEstado(true);
         }
+        // NOTA: Las cadenas no se comparan con ==, tienen su propio metodo para comparar texto
+        // El metodo utilizado es variable.equals(variable) si son iguales devuelve true
         
-        Persona persona2 = new Persona("Paco",9497,'M',21,true);
-        
+        // PARA ESTE PUNTO TENEMOS UNA PERSONA CON LOS DATOS ASIGNADOS ANTERIORMENTE
+        // Y en la clase Persona hicimos un metodo que nos muestre su informacion
+        // entonces el objeto manda a llamar ese metodo
         persona1.MostrarDatos();
         System.out.println("------------------------");
-        persona2.MostrarDatos();
-    }
-    
+        
 
-    
-    
-    public static void ArregloDentroObjeto(){
-        Persona Carlos = new Persona("Carlos",1234,'M',22,true);
-        Carlos.AsignarCurso("Sistemas Operativos 2", 777);
-        Carlos.AsignarCurso("IPC1", 777);
-        Carlos.AsignarCurso("IPC2", 777);
-        Carlos.AsignarCurso("Logica de Sistemas", 777);
-        Carlos.AsignarCurso("Mate Computo", 777);
-        Carlos.AsignarCurso("Mate Computo 2", 777);
-        Carlos.MostrarCursos();
-
-    }
-    
-    public static void ArreglosDeObjetos(){
-        // ARREGLOS DE OBJETOS
+        // OBJETOS CON UN CONSTRUCTOR GENERADO
         /*
-        Persona persona1;
-        Persona persona2;
-        Persona persona3;
-        Persona persona4;
-        Persona persona5;
+            Este constructor es "Especial" ya que nosotros lo creamos y nosotros decimos que valores tendra y como se comportara
+            ver la explicacion en la clase Persona.
         */
         
-        //personas[0].setNombre("Carlos");
+        // Se recomienda utilizar este constructor cuando ya sabemos que el flujo del programa nos dara los datos del objeto
+        // Para que cuando lo creemos, le asignemos sus valores desde un inicio
         
-        // PRIMERO QUE HAY QUE HACER ES INICIALIZAR LOS OBJETOS DEL ARREGLO
+        // En este caso, creamos a la persona2 con los datos que le mandamos por parametros y lo que hace es llamar al metodo constructor
+        // generado con la cantidad de parametros
+        
+        // NOTA: Podemos hacer varios de estos constructores, depende de la cantidad de dato que querramos guardar, todo depende del programador.
+        Persona persona2 = new Persona("Paco",9497,'M',21,true);
+        
+        // persona2 tambien puede usar MostrarDatos, porque es un metodo de la clase, pero los valores son distintos para cada objeto
+        // Y con esto tenemos el manejode Objetos en individual.
+        persona2.MostrarDatos();
+        
+        
+        // ARREGLOS DE OBJETOS
+        /*
+            Esta situacion se da cuando queremos almacenar cantidades grandes de este objeto, por ejemplo 100 objetos
+            Entonces usamosa un arreglo de objetos para esto.
+        
+            Es decir que en vez de tener estas variables
+                    Persona persona1;
+                    Persona persona2;
+                    Persona persona3;
+                    ...
+                    Persona persona99;
+                    Persona persona100;
+        
+            Vamos a tener lo siguiente:
+            Persona[] personas = new Personas[100];
+        
+            La estructura es la misma que un arreglo normal, siempre con un tamaño fijo.
+        */
+        
+        // NOTA: NO ES LO MISMO DECLARARAR UN ARREGLO DE OBJETOS QUE UN OBJETO, ES DECIR
+        // HAY QUE INICIALIZAR CADA OBJETO DEL ARREGLO
+                               
+        /* INICIALIZAR CON VALORES VACIOS
+            Lo que podemos hacer es un recorrido que recorra cada posicion del arreglo y en esta posicion utilice
+            el Constructor por defecto, para darle valores vacios.
+        */
         for (int i = 0; i < personas.length; i++) {
             personas[i] = new Persona();
             // persona1 = new Persona();
@@ -111,9 +144,15 @@ public class Clase6 {
             // persona5 = new Persona();
         }
         
-        // CUANDO NOSOTROS YA SABEMOS LOS DATOS A ASIGNAR
+        /* NOTA IMPORTANTE:
+            Se recomienda tener un contador para cada arrreglo, es decir si queremos hacer un recorrido del arreglo para obtener informacion
+            vamos a recorrer desde 0 hasta contador, en vez de recorrer todo el arreglo, para evitar los valores no inicializados y que nos de error
+        */
         
+        // ASIGNANDO VALORES A UN ARREGLO DE OBJETOS
         for (int i = 0; i < personas.length; i++) {
+            // Vamos a guardar el nombre y la edad por cada posicion, entonces usamos el codigo necesario para obtener esta informacion 
+            // Y por ultimo, mandamos a inicializar el objeto
             String nombre;
             int edad;
             System.out.print("Escribe tu nombre: ");
@@ -122,45 +161,100 @@ public class Clase6 {
             edad = sc.nextInt();
             personas[i] = new Persona(nombre,1234,'M',edad,true);
         }
+        // En que situaciones usar este tipo de metodos:
+        /*
+            Cuando estamos leyendo un archivo con n cantidad de datos, podemos hacer la lectura del archivo por filas
+            Y cada fila es una posicion del arreglo, es decir, el contador y podemos mandar el constructor generado para almacenar
+            su informacion
+        */
         
+ 
+        // METODOS UTILIZADOS EN UN ARREGLO DE OBJETOS
+        System.out.println("MOSTRAR LOS DATOS");
+        MostrarPersonas(personas);
         
-//        System.out.println("MOSTRAR LOS DATOS");
-//        MostrarPersonas(personas);
-        
-/*        Persona busqueda = BuscarPersona("Juana");
+        // FUNCION PARA BUSCAR UNA PERSONA
+        Persona busqueda = BuscarPersona("Juana");
+        // Entonces para este punto busqueda es un objeto tipo Persona
+        // que ejecuto una busqueda para encontrar una persona llamada Juana
+        // y segun su valor, hace el siguiente comportamiento.
         if(busqueda != null){
             busqueda.MostrarDatos();
         }else{
             System.out.println("El dato no existe");
         }
-*/
-    BuscarPorNombre("Carlos");
+
+        // METODO PARA BUSCAR TODOS LOS USUARIOS DE UN ATRIBUTO
+        BuscarPorNombre("Carlos");
+    
+    
+        // MANEJAR UN ARREGLO DE OBJETOS DENTRO DE OTRO OBJETO
+        /*
+            Existe la posibiildad de que un objeto tenga relacion con mas objetos
+            para este caso vamos a crear una clase llamada "Clase" en relacion a los cursos de la U
+            y sabemos que una persona puede llevar Cursos, para este ejemplo seran un maximo de 5.
+            - VER LA CLASE "CLASE"
+            - VER LA CLASE "PERSONA"
+        */
+        
+        // Para este punto, ya tenemos la estructura para guardar cursos dentro de una persona
+        // Creamos la persona "Carlos" con su constructor generado
+        Persona Carlos = new Persona("Carlos",1234,'M',22,true);
+        // AHORA EL METODO AsignarCurso VIENE DE LA CLASE PERSONA, ES DECIR CADA PERSONA PUEDE ASIGNARSE CURSOS
+        // La logica dice que este metodo recibe los datos de los cursos por agregar, en este caso
+        // Nos solicita que para asignar curso, ingresemos el codigo y el nombre
+        Carlos.AsignarCurso("Sistemas Operativos 2", 777);
+        Carlos.AsignarCurso("IPC1", 777);
+        Carlos.AsignarCurso("IPC2", 777);
+        Carlos.AsignarCurso("Logica de Sistemas", 777);
+        Carlos.AsignarCurso("Mate Computo", 777);
+        Carlos.AsignarCurso("Mate Computo 2", 777);
+        // Para este punto, Carlos ya tiene asignados sus cursos y solo mandamos a llamar el metodo de MostrarCursos
+        // Recordemos que este metodo es propio de la persona, entonces cada persona tiene este metodo pero sus valores no son los mismos.
+        Carlos.MostrarCursos();
     }
     
+    // METODO PARA MOSTRAR TODAS LAS PERSONAS GUARDADAS
+    public static void MostrarPersonas(Persona[] arreglo){
+        // Para hacer estos recorridos, se recomienda que se utilice como limite el contador, asi no usamos valores
+        // que no se han inicializado :)
+        
+        // Hacemos un recorrido que va ir viendo posicion por posicion y mandara a llamar el metodo de MostrarDatos de cada persona
+        // Recordemos que cada posicion del arreglo representa un objeto distinto con valores distintos.
+        for (int i = 0; i < arreglo.length; i++) {
+            arreglo[i].MostrarDatos();
+            System.out.println("-------------------------------");
+        }
+    }
+    
+    // AL FINAL DE CUENTAS, UN OBJETO PUEDE SER UNA VARIABLE, ENTONCES PODEMOS HACER FUNCIONES DE ESA "VARIABLE"
+    public static Persona BuscarPersona(String nombre){
+        // En este caso quisimos hacer un arreglo que encuentre el primer objeto con el nombre que mandemos a llamar
+        // entonces hacemos un recorrido y hacemos la validacion
+        for (int i = 0; i < personas.length; i++) {
+            if(personas[i].getNombre().equals(nombre)){
+                System.out.println("LO ENCONTRAMOS");
+                // Si lo encontramos, vamos a devolver el objeto, recordemos que cada posicion del arreglo es una posicion
+                return personas[i];
+            }
+        }
+        // Y si salimos del for, es decir que no lo encontramos, retornamos un null, porque no existe
+        return null;
+    }
+    
+    // METODO PARA MOSTRAR A TODAS LAS PERSONAS QUE SE LLAMEN (nombre)
     public static void BuscarPorNombre(String nombre){
+        // La logica es distinta, la funcion anterior nos retornaba un dato, en este caso queremos mostrar todos los datos
+        // entonces hacemos el mismo recorrido y si el nombre coincide con el que buscamos, mostrara su informacion con el
+        // metodo creado de mostrarDatos
+        
+        // NOTA: CADA POSICION DEL ARREGLO ES UN OBJETO DISTINTO, MISMA ESTRUCTURA, DIFERENTES VALORES
         for (int i = 0; i < personas.length; i++) {
             if(personas[i].getNombre().equals(nombre)){
                 System.out.println("LO ENCONTRAMOS");
                 personas[i].MostrarDatos();
                 System.out.println("--------------");
             }
-        }
-    }
-    
-    public static Persona BuscarPersona(String nombre){
-        for (int i = 0; i < personas.length; i++) {
-            if(personas[i].getNombre().equals(nombre)){
-                System.out.println("LO ENCONTRAMOS");
-                return personas[i];
-            }
-        }
-        return null;
-    }
-    
-    public static void MostrarPersonas(Persona[] arreglo){
-        for (int i = 0; i < arreglo.length; i++) {
-            arreglo[i].MostrarDatos();
-            System.out.println("-------------------------------");
         }
     }
 
