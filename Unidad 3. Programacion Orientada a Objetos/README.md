@@ -25,7 +25,7 @@ _Fecha: 16/02/2021_
 
 ## Clase 6 - Horario de Laboratorio
 
-_Se hizo un repaso de los temas vistos en la clase anterior para dejarlo de una forma mas generica, incluimos el tema de **Metodos Constructores** y como manejar los objetos como un arreglo de objetos _
+_Se hizo un repaso de los temas vistos en la clase anterior para dejarlo de una forma mas generica, incluimos el tema de **Metodos Constructores** y como manejar los objetos como un arreglo de objetos._
 
 **Grabacion de la clase:** https://drive.google.com/file/d/1rM7IbwbVgn0oFhqRqXAPgZRuXFKYb1hZ/view?usp=sharing
 
