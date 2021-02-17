@@ -6,10 +6,14 @@ _Este apartado es especificamente para las tareas que se dejaron en el curso, es
 - Traten de entender el codigo y averiguar como funciona.
 - Lean los comentarios las veces necesarias, pero aprendan bien como funciona.
 - **No solo copien y peguen y digan "Ya estuvo" :)**
+- **NOTA: Cada quien tiene su forma de programar, hay mil y un formas de hacer las cosas y los codigos pueden parecerse, pero no ser iguales, ojo al dato.**
 
 ## Tarea 1: Programacion JAVA
 _El enfoque de esta tarea es que ustedes practican las sentencias basicas de JAVA, es decir todo lo que vimos en la primera clase es lo basico y ustedes deben de aprender a manejar de la mejor manera las sentencias, los bucles, la implementacion de metodos y funciones._
 
 **Esta tarea tiene un README dentro para que vean mas detallado como se le dio solucion.**
 
-**NOTA: Cada quien tiene su forma de programar, hay mil y un formas de hacer las cosas y los codigos pueden parecerse, pero no ser iguales, ojo al dato.**
+## Practica 1: Arreglos, Matrices y Archivos
+_El enfoque principal de esta actividad es que ustedes aprendan a manejar vectores tanto como arreglos y matrices que es un vector de vectores y tambien que aprendan a como interpretar archivos de texto con informacion y como manejar esta informacion por medio de los vectores._
+
+**Todo el codigo esta comentado para que se den una idea de como es que se resolvieron las cosas**
