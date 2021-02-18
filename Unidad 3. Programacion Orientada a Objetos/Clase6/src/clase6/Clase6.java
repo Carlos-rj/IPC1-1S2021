@@ -1,6 +1,9 @@
 package clase6;
 
 // Importamos el Scanner de toda la vida
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.util.Scanner;
 
 /* La situacion ahora es un poco distinta, vamos a ver que nuestra clase main
@@ -27,12 +30,16 @@ public class Clase6 {
     // Para declarar un arreglo de objetos, utilizamos la misma estructura que un tipo de dato primitivo
     // Objeto [] nombre_variable == new Objeto[tamaño];
     static Persona[] personas = new Persona[5];
+    static int contador_personas = 0;
     
     // Usamos un scanner para leer numeros y otro para leer Strings.
     static Scanner sc = new Scanner(System.in);
     static Scanner lector = new Scanner(System.in);
         
     public static void main(String[] args) {
+        
+        CargarPersonas();
+        personas = new Persona[5];
         /* MANIPULACION DE OBJETOS
             Un objeto es la instancia de una clase, es decir un objeto representa a la clase
             Y una clase puede tener muchos objetos, pero sus valores no son los mismos
@@ -258,4 +265,67 @@ public class Clase6 {
         }
     }
 
+    // METODO EXTRA: COMO LEER DATOS DESDE UN CSV
+    public static void CargarPersonas(){
+        // Este metodo solo sirve para reforzar lo que hemos visto en la Practica 1
+        // Pedimos la ruta del archivo que tenemos que leer
+        String ruta;
+        System.out.print("Ingresar la ruta del archivo csv a leer: ");
+        ruta = lector.nextLine();
+        // CODIGO PARA ABRIR UN ARCHIVO
+        File archivo = null;
+        FileReader fr = null;
+        BufferedReader br = null;
+
+        try {
+            // OBJETOS PARA ABRIR LOS ARCHIVOS
+            // Una libreria no es mas que una clase que ya esta en JAVA, entonces cuando importamos "librerias"
+            // Estamos importando una clase
+            archivo = new File(ruta);
+            fr = new FileReader(archivo);
+            br = new BufferedReader(fr);
+
+            // LEYENDO EL ARCHIVO
+            // Hack: si el archivo tiene encabezado, utilizar un br.readLine() antes de la lectura 
+            String linea = br.readLine();
+            while ((linea = br.readLine()) != null) {
+                // Aqui estamos leyendo fila por fila, entonces vamos a almacenar esa informacion en nuestro arreglo de personas
+                System.out.println(linea);
+                // Separando los datos por una coma
+                String[] Datos = linea.split(",");
+               
+                // Segun la estructura del archivo, sabemos que como vienen los datos:
+                // Recordemos que estos datos son string, entonces si es necesario convertimos los datos
+                String nombre = Datos[0];
+                int CUI = Integer.parseInt(Datos[1]);
+                char Sexo = Datos[2].charAt(0);
+                int edad = Integer.parseInt(Datos[3]);
+                boolean estado = false;
+                if(Datos[4].equals("Morido")){
+                    estado = false;
+                }else if(Datos[4].equals("Vivido")){
+                    estado = true;
+                }
+                // Con nuestros datos, podemos crear un objeto de tipo Persona
+                Persona nuevo = new Persona(nombre, CUI, Sexo, edad, estado);
+                // Y ahora solo agregamos este objeto a nuestro arreglo
+                personas[contador_personas] = nuevo;
+                // Y aumentamos en uno nuestro contador
+                contador_personas++;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (null != fr) {
+                    fr.close();
+                }
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        }
+        
+        // UNA VEZ TERMINADO NUESTRA CARGA DE DATOS, VAMOS A VISUALIZAR LA INFORMACION
+        MostrarPersonas(personas);
+    }
 }
