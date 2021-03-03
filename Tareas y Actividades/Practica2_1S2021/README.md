@@ -28,6 +28,6 @@ _Un MENU desarrollado en JAVA que tenga las opciones de CARGAR los datos que vie
 
 #### Pokemon - Pokeball
 
-https://raw.githubusercontent.com/Carlos-rj/IPC1-1S2021/tree/master/Tareas%20y%20Actividades/Practica1_1S2021/Explicaciones/P1.png
+![Alt text](/../master/Tareas%20y%20Actividades/Practica2_1S2021/Explicaciones/P1.png?raw=true
 
-https://raw.githubusercontent.com/Carlos-rj/IPC1-1S2021/tree/master/Tareas%20y%20Actividades/Practica1_1S2021/Explicaciones/P2.png
+![Alt text](Explicaciones/P1.png?raw=true "Title")
