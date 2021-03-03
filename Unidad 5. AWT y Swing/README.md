@@ -24,3 +24,21 @@ _En este laboratorio se explico lo que son las librerias AWT y Swing, que es una
 - Manejar informacion
 	- Arreglos static
 	- Metodos static
+
+## Clase 9 - Laboratorio extra
+
+_En esta sesion extra que se dio por la noche del mismo dia, se hizo un repaso rapido de como manejar la informacion entre varias clases que actuaran como ventana, se implemento la lectura de un archivo JSON y como mostrar sus datos en un JTable, todo con el fin de apoyarlos para su proyecto._
+
+**Grabacion de la clase:** https://drive.google.com/file/d/1P4-R3wQ6jBOLpZ360zzyJdqP_ic9FAp6/view?usp=sharing
+
+### Contenido 📋
+
+- Crear una ventana.
+- Crear un botón.
+	- Acciones de un Botón.
+- Agregar un JAR.
+- Declarar un JFileChooser.
+- Leer un archivo JSON.
+- Guardar la informacion en un arreglo.
+- Interpretar la informacion de los arreglos.
+- Mostrar la informacion en una tabla.

@@ -1,0 +1,32 @@
+[
+	{
+		"nombre": "Carlos",
+		"edad": 22,
+		"tamaño": 1.78
+	},
+	{
+		"nombre": "Roberto",
+		"edad": 21,
+		"tamaño": 1.74
+	},
+	{
+		"nombre": "Juan",
+		"edad": 23,
+		"tamaño": 1.75
+	},
+	{
+		"nombre": "Pancho",
+		"edad": 25,
+		"tamaño": 1.87
+	},
+	{
+		"nombre": "Maria",
+		"edad": 23,
+		"tamaño": 1.58
+	},
+	{
+		"nombre": "Juana",
+		"edad": 24,
+		"tamaño": 1.63
+	}
+]
