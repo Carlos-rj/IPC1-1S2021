@@ -35,14 +35,19 @@ public class Clase9 {
         }
     }
     
+    // METODO PARA CONVERTIR MI ARREGLO DE OBJETOS A UN OBJECT[][]
     public static Object[][] convertirDatos(){
+        // Lo mas importante es identificar cuantos datos tengo, para eso usamos el contador
+        // Y cuantas columnas vamos a almacenar, en este caso seran las columnas que queremos visualizar en la tabla
         int filas = cPersonas;
         Object[][] arreglo = new Object[filas][3];
+        // Con un simple for, podemos crear el objeto y declararle los valores que necesitamos
         for (int i = 0; i < filas; i++) {
             arreglo[i][0] = personas[i].getNombre();
             arreglo[i][1] = personas[i].getEdad();
             arreglo[i][2] = personas[i].getTamaño();
         }
+        // Por ultimoo, retornamos el Object[][]
         return arreglo;
     }
 }
