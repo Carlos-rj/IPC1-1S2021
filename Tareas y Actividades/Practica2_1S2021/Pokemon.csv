@@ -1,0 +1,16 @@
+Id,Tipo,Nombre,Vida,Puntos de ataque,Capturado,Estado
+1,Planta,Bulbasaur,131.69,49.53514481,salvaje,vivo
+2,Planta,Ivysaur,169.50,24.13837775,salvaje,vivo
+3,Planta,Venusaur,89.07,28.01899385,salvaje,vivo
+4,Fuego,Charmander,177.70,45.22429869,salvaje,vivo
+5,Fuego,Charmeleon,149.09,24.82514199,salvaje,vivo
+6,Fuego,Charizard,164.54,51.00890427,salvaje,vivo
+7,Agua,Squirtle,196.41,33.10366848,salvaje,vivo
+8,Agua,Wartortle,174.29,36.13384853,salvaje,vivo
+9,Agua,Blastoise,186.79,51.35095857,salvaje,vivo
+10,Bicho,Caterpie,194.48,15.21755841,salvaje,vivo
+11,Bicho,Metapod,154.62,18.84470018,salvaje,vivo
+12,Bicho,Butterfree,148.58,16.04880023,salvaje,vivo
+13,Bicho,Weedle,113.69,49.15510627,salvaje,vivo
+14,Bicho,Kakuna,152.60,32.9562613,salvaje,vivo
+15,Bicho,Beedrill,153.37,46.98385185,salvaje,vivo

@@ -1,0 +1,11 @@
+Mensaje: Y si nos ponemos un poco creativos y dejamos un mensaje muy extenso ojala lo logren
+
+MatrizA: 
+[ 24][-23][20]
+[ 15][ 6 ][-1]
+[-23][-9 ][15]
+
+Como estamos aplicando modulo27 entonces los negativos se complementan, la respuesta seria
+[24][ 4][20] 
+[15][ 6][26] 
+[ 4][18][15]

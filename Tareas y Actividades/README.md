@@ -17,3 +17,8 @@ _El enfoque de esta tarea es que ustedes practican las sentencias basicas de JAV
 _El enfoque principal de esta actividad es que ustedes aprendan a manejar vectores tanto como arreglos y matrices que es un vector de vectores y tambien que aprendan a como interpretar archivos de texto con informacion y como manejar esta informacion por medio de los vectores._
 
 **Todo el codigo esta comentado para que se den una idea de como es que se resolvieron las cosas**
+
+## Practica 2: Programacion Orientada a Objetos
+_Una vez que ustedes saben manejar arreglos, pueden manejar los Objetos en JAVA que resultan ser "Plantillas" que tiene cierta cantidad de atributos, es decir que podemos crear una representacion de algo de la vida real, en un Objeto en JAVA y esto darle ciertos "valores" que son los atributos y que este Objeto haga ciertas "acciones" que son los metodos, relacionando un poco de como trabajarian los Objetos y un Objeto que puede tener dentro otro Objeto._
+
+**Todo el codigo esta comentado para que se den una idea de como es que se resolvieron las cosas**
