@@ -58,4 +58,4 @@ En conclusion tenemos que:
 	- Entrenadores[i] -> Objeto Entrenador
 		- Entrenadores[i].Pokeball -> Arreglo de Pokeballs
 			- Entrenadores[i].Pokeball[0] -> Objeto Pokeball
-				-Entrenadores[i].Pokeball[0].Pokemon -> Objeto Pokemon
+				- Entrenadores[i].Pokeball[0].Pokemon -> Objeto Pokemon
