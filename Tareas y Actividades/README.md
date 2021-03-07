@@ -18,7 +18,11 @@ _El enfoque principal de esta actividad es que ustedes aprendan a manejar vector
 
 **Todo el codigo esta comentado para que se den una idea de como es que se resolvieron las cosas**
 
+**Grabacion de la solucion**: https://drive.google.com/file/d/166Y9k6ppS9Dd8rbIDLPZZadNZe_lhaJn/view?usp=sharing
+
 ## Practica 2: Programacion Orientada a Objetos
 _Una vez que ustedes saben manejar arreglos, pueden manejar los Objetos en JAVA que resultan ser "Plantillas" que tiene cierta cantidad de atributos, es decir que podemos crear una representacion de algo de la vida real, en un Objeto en JAVA y esto darle ciertos "valores" que son los atributos y que este Objeto haga ciertas "acciones" que son los metodos, relacionando un poco de como trabajarian los Objetos y un Objeto que puede tener dentro otro Objeto._
 
 **Todo el codigo esta comentado para que se den una idea de como es que se resolvieron las cosas**
+
+**Grabacion de la solucion**: https://drive.google.com/file/d/1KGdDS2Y7NJC_JTA2Tsm1zgfdh9jg9-Tj/view?usp=sharing
