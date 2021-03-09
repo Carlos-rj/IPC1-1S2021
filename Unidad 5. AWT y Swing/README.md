@@ -79,3 +79,4 @@ _Despues de haber explicado todos los componentes necesarios del proyecto a exce
 		- *Substance-4.3*: Esta libreria puede utilizar el metodo: SubstanceLookAndFeel.setCurrentTheme()
 	- Recomendacion: Usando el metodo UIManager.setLookAndFeel() dentro del parentesis escribir "new " y utilizar CTRL + BAR para ver todas las opciones.
 	- Aclaracion: Estas librerias deben de ser importadas para ser utilizadas :) 
+	- En la carpeta de la clase encontraran las librerias.
