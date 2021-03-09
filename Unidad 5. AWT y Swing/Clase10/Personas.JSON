@@ -1,0 +1,38 @@
+[
+	{
+		"codigo": "1",
+		"nombre": "Carlos",
+		"edad": 22,
+		"tamaño": 1.78
+	},
+	{
+				"codigo": "2",
+		"nombre": "Roberto",
+		"edad": 21,
+		"tamaño": 1.74
+	},
+	{
+				"codigo": "3",
+		"nombre": "Juan",
+		"edad": 23,
+		"tamaño": 1.75
+	},
+	{
+				"codigo": "4",
+		"nombre": "Pancho",
+		"edad": 25,
+		"tamaño": 1.87
+	},
+	{
+				"codigo": "5",
+		"nombre": "Maria",
+		"edad": 23,
+		"tamaño": 1.58
+	},
+	{
+				"codigo": "6",
+		"nombre": "Juana",
+		"edad": 24,
+		"tamaño": 1.63
+	}
+]
