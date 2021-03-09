@@ -1,9 +1,15 @@
 package clase10;
 
 
+import com.jtattoo.plaf.mcwin.McWinLookAndFeel;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.UIManager;
-
+import org.jvnet.substance.SubstanceLookAndFeel;
+import org.jvnet.substance.skin.NebulaBrickWallSkin;
+import org.jvnet.substance.skin.SubstanceAutumnLookAndFeel;
+import org.jvnet.substance.skin.SubstanceMagmaLookAndFeel;
+import org.jvnet.substance.skin.SubstanceRavenGraphiteGlassLookAndFeel;
 
 public class Clase10 {
     // ARREGLOS PARA ALMACENAR LA INFORMACION
@@ -11,6 +17,7 @@ public class Clase10 {
     static int cPersonas = 0;
     
     public static void main(String[] args) {
+        JFrame.setDefaultLookAndFeelDecorated(true);
         /* AGREGANDO UN LOOK AND FEEL (LAF)
             El mirar y sentir es el que nos permite agregar una Skin a nuestro programa, de manera sencilla podemos cambiar
             toda nuestra interfaz con una simple linea de codigo.
@@ -22,8 +29,11 @@ public class Clase10 {
         */
         try{
             // COMANDO PARA AGREGAR UN LOOK AND FEEL
+            
             // Debemos de agregar en comillas lo que pondriamos en el import y siempre acompañado de un try-catch.
-            UIManager.setLookAndFeel("com.jtattoo.plaf.aluminium.AluminiumLookAndFeel");
+            UIManager.setLookAndFeel(new McWinLookAndFeel());
+            // Se recomienda que despues del new se utilice CTRL + BAR para ver todos los LAF disponibles
+            
             // Mi metodo Main solo hara llamada a mi Ventana.
             Ventana nueva = new Ventana();            
         }catch(Exception e){
