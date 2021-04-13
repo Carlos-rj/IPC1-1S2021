@@ -16,7 +16,7 @@ _Cambiando todo el entorno de trabajo, nos toca un tema muy interesante que es l
 	- Redes privadas
 	- Localhost
 - Programacion Web - Backend
-	- Aplicacion cliente
+	- Aplicacion servidor
 	- Aplicaciones REST
 	- API REST
 	- Objetos JSON
@@ -40,3 +40,59 @@ _Cambiando todo el entorno de trabajo, nos toca un tema muy interesante que es l
 
 _NOTA: Si el manejo de Flask no quedo del todo claro, pueden ver el siguiente video, fue el video en el que me base para hacer el ejemplo:_ https://www.youtube.com/watch?v=Esdj9wlBOaI
 
+
+_Fecha: 13/04/2021_
+
+## Clase 14 - Frontend - Horario de Laboratorio
+
+_Una vez que hemos trabajado con los entornos del backend, podemos migrarnos al entorno de la aplicacion cliente y empezar a ver como es que funcionan los frameworks de desarrollo para frontend, existen muchas alternativas para trabajar frontend pero en este caso, se decidio trabajar con **Boostrap** y asi realizar la conexion al backend por medio de un **fetch**._
+
+**Grabacion de la clase:** https://drive.google.com/file/d/1OcD4lHFLm-wbtcH3AmQiNuqb57WJWeCW/view?usp=sharing
+
+### Contenido 📋
+
+- TCP / IP
+	- Definicion
+	- Protocolo TCP
+	- Protocolo IP
+- Puertos logicos
+	- Puertos reservados
+- Protocolos de Red
+	- Tipos de Protocolos
+- HTTP - HTTPS
+	- Definicion
+	- Diferencias
+	- Implementacion con Programacion Web
+	- Mensajes/Peticiones HTTP
+- Programacion Web - FrontEnd
+	- Aplicacion cliente
+	- Lenguajes recomendados
+	- Comparaciones con el Backend
+	- Framework
+	- Conexion Cliente - Servidor
+		- Fetchs: https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Using_Fetch
+		- Axios: https://desarrolloweb.com/articulos/axios-ajaxcliente-http-javascript.html
+	- Boostrap
+		- Definicion
+		- Estructura
+		- Como funciona
+		- Documentacion: https://getbootstrap.com/
+	- Aplicacion Frontend
+		- Plantilla Bootstrap
+		- Contenedores <div>
+			- Cambiar tamaño
+			- Cambiar posicion
+			- Agregar un espaciado
+		- Formularios
+			- Tipos de Entradas
+		- Botones
+			- Agregar funciones
+		- Tablas
+			- Cargar informacion desde un metodo
+		- Etiqueta <script>
+			- Crear Metodos
+			- Asignar metodos
+			- Metodos con parametros
+			- Redireccionar paginas
+			- sessionStorage
+		

@@ -1,0 +1,216 @@
+<!-- LA PLANTILLA INICIAL SE ENCUENTRA EN LA PAGINA DE BOOSTRAP -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Clase 14 - Frontend</title>
+  </head>
+  <!-- Usamos el atributo onload="Metodo()" en el body, para decirle que haga una accion
+        cuando se cargue el componente. -->
+  <body onload="ObtenerDatos()">
+    <h1>Pagina Inicial - Personas</h1>
+    <div>
+        <!-- Algunos de los atributos mas usados son:
+            width: para el ancho del objeto
+            padding-left o padding-right: para agregar un espacion con el borde
+            float: para indicarle la posicion donde estara posicionado el objeto -->
+        <div style="width: 40%; padding-left: 25px; float: left;">
+              <!-- Los form vienen de la pagina de Boostrap.
+                recordar agregarle un id a los componentes que vamos a utilizar
+                en este caso los input (Entradas de datos) llevan un id.
+                Segun el type, es el tipo de dato que recibe el input. -->
+            <form>
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre">
+            </div>
+            <div class="mb-3">
+              <label for="apellido" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="apellido">
+            </div>
+            <div class="mb-3">
+                <label for="edad" class="form-label">Edad</label>
+                <input type="number" class="form-control" id="edad">
+              </div>
+                <!-- Los botones tambien se pueden consultar en la pagina de boostrap.
+                Se recomienda que los trabajemos en tipo button siempre y se utiliza el
+                atributo onclick="Metodo()" -->
+              <button onclick="PresionarBoton()" type="button" class="btn btn-outline-dark">Registrar</button>
+          </form>
+        </div>
+        <div style="width: 55%; padding-right: 25px; float: right;">
+            <table class="table table-striped">
+                <thead>
+                    <tr class="table-dark">
+                        <th> Nombre </th>
+                        <th> Apellido </th>
+                        <th> Edad </th>
+                        <th> Acciones </th>
+                    </tr>
+                </thead>
+                <!-- Al igual que los input, a la tabla que queremos agregarle informacion
+                    Tambien le agregamos un id. -->
+                <tbody id="detalles"></tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    
+     <!-- PARA AGREGAR LAS FUNCIONES JAVASCRIPT AGREGAMOS UNA ETIQUETA SCRIPT Y DENTRO DE ELLA SE HACEN LOS METODOS-->
+    <script>
+        /* DECLARANDO FUNCIONES
+            Usamos la palabra function y el nombre que queramos asignarle, esto lo hacemos
+            para que cuando un componente llame a la funcion, se ejecute, segun su atributo
+        */
+
+        // METODO INSERTAR
+        function PresionarBoton(){
+            // Console.log, nos sirve para imprimir informacion en la consola del navegador
+            console.log("Hola, me presionaste");
+            /* OBTENIENDO INFORMACION
+               Para declarar variables usamos el var variable
+               
+               Para encontrar un elemento en el html, usamos el metodo document.querySelector(#id)
+               este metodo devuelve la etiqueta con todo y sus atributos.
+            */
+            var nombre = document.querySelector('#nombre').value
+            var apellido = document.querySelector('#apellido').value
+            var edad = document.querySelector('#edad').value
+            /* CREANDO NUESTRO JSON
+                Declaramos una variable y le asignamos un valor con llaves, simulando nuestro JSON
+                dandole un clave - valor
+            */
+            var objeto = {
+                'nombre': nombre,
+                'apellido': apellido,
+                'edad': edad
+            }
+            console.log(objeto)
+
+            /* EL METODO MAGICO - EL FETCH
+            El fetch es el que nos permite crear peticiones HTTPS, la estructura es simple.
+            Debemos de ingresarle una ruta, es la ruta del endpoint que queremos consumir, seguido de ello
+            agregamos un objeto con los atributos de la peticion
+                method: Puede ser GET, POST, PUT, DELETE
+                body: Si el endpoint necesita un body, se le manda en este valor
+                        - Agregarle el metodo JSON.stringify(objeto)
+                headers: Estas normalmente no cambian, son las propiedades del metodo
+            */
+            fetch('http://localhost:3000/Personas', {
+            method: 'POST',
+            body: JSON.stringify(objeto),
+            headers:{
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',}})
+
+            /* SIMULANDO UN TRY - CATCH
+                El metodo fetch trabaja como una Promesa en JavaScript, representa el estado final del metodo
+                como si de un return se tratase.
+
+                .then: Para indicar que es lo que hara la respuesta del metodo, el primer then sirve para transformar la respuesta 
+                a un JSON entendible para JavaScript.
+
+                .catch: Para indicar que es lo que se hara si se obtuvo un fracaso.
+            */
+            .then(res => res.json())
+            .catch(err => {
+                console.error('Error:', err)
+                alert("Ocurrio un error, ver la consola")
+            })
+            /* ULTIMA TRANSFORMACION
+                Si el metodo funciono correctamente y se logro transformar la respuesta en un JSON, hara lo que este dentro de las llaves.
+            */
+            .then(response =>{
+                // En este apargado, se haran las acciones si la respuesta fue correcta basicamente.
+                console.log(response);
+                // Usamos un alert, para desplegar un mensaje en pantalla de parte del navegador
+                // Esto se puede reemplazar con mas librerias.
+                alert(response.Mensaje)
+
+                // Si quisieramos llamar un metodo definido, tambien es valido.
+                ObtenerDatos()
+            })
+        }
+
+        // METODO OBTENER
+        function ObtenerDatos(){
+            // La estructura del fetch no cambia, solo cambian los atributos, como el tipo de metodo.
+            var tabla = document.querySelector('#detalles')
+
+            // Esta cadena nos servira para escribir los datos en la tabla.
+            var cadena = ''
+            
+            fetch('http://localhost:3000/Personas', {
+            method: 'GET',
+            headers:{
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',}})
+            .then(res => res.json())
+            .catch(err => {
+                console.error('Error:', err)
+                alert("Ocurrio un error, ver la consola")
+            })
+            .then(response =>{
+                console.log(response);
+                // Usamos un foreach para darle el valor a un objeto dentro de un arreglo.
+
+                // arreglo.forEach(variable => {que se hara dentro del for})
+                response.forEach(element => {
+                    // En este caso, element es el objeto que esta recorriendo el for, entonces por cada iteracion manipulamos a element
+                    console.log(element)
+                    // Agregamos a la cadena los datos de la respuesta del JSON para agregarlo a un table.
+                    cadena += `<tr>
+                        <td> ${element.Nombre} </td>
+                        <td> ${element.Apellido} </td>
+                        <td> ${element.Edad} </td>
+                        <td> <button value=${element.Nombre} onclick="verPerfil(this)" type="button" class="btn btn-outline-dark">Ver Perfil</button> </td>
+                        </tr>`         
+                        // Cabe destacar que tambien se pueden agregar otras etiquetas, en si se trabaja como texto.
+                        // NOTA: Recuerden no user '' si no que `` para que los deje usar el ${} y agregar variables al texto.
+                });
+
+                // POR ULTIMO: Usamos innerHTML para agregar el HTML a la etiqueta que indicamos anteriormente.
+                tabla.innerHTML = cadena
+            })
+        }
+
+        // HACKS DEL BUTTON
+        /*
+        Por cada boton, agregaremos un metood onclick para que pueda ver el perfil de cada usuario, para eso usamos
+        el hack de agregarle ya sea el valor o el nombre al identificador unico del dato, para tener referencia de el.
+        */
+        function verPerfil(boton){
+            console.log(boton)
+            // En mi caso, yo use el value, lo asignamos a una variable.
+            var usuario = boton.value
+
+            /* sessionStorage, javascript cuenta con un almacenamiento para la pagina, este almacenamiento
+                estara vigente hasta que se cierre la pagina, es ideal para almacenar datos entre paginas.
+
+                Usamos el storage.setItem("llave", valor) donde llave es el atributo donde se guardara el valor del sessionStorage
+            */
+            sessionStorage.setItem("buscar", usuario)
+
+            // CAMBIAR DE PAGINA, SIN USAR OTRA PAGINA
+            // Usamos el location.href = "Pagina.html" para cambiar la pagina actual.
+            location.href="Perfil.html"
+        }
+        
+        
+    </script>        
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

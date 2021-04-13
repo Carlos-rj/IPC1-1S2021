@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Clase 14 - Frontend</title>
+  </head>
+  <!-- Nuestro onLoad puede servir como un metodo que se ejecuta cada vez que se inicie la pagina -->
+  <body onload="ObtenerDatos()">
+    <h1>Pagina Inicial - Perfil</h1>
+    <div>
+        <div style="width: 40%; padding-left: 25px; float: left;">
+            <form>
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" disabled>
+            </div>
+            <div class="mb-3">
+              <label for="apellido" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="apellido">
+            </div>
+            <div class="mb-3">
+                <label for="edad" class="form-label">Edad</label>
+                <input type="number" class="form-control" id="edad">
+              </div>
+              <button onclick="Regresar()" type="button" class="btn btn-outline-dark">Regresar</button>
+              <button onclick="Modificar()" type="button" class="btn btn-outline-warning">Modificar</button>
+              <button onclick="Eliminar()" type="button" class="btn btn-outline-danger">Eliminar</button>
+         
+            </form>
+        </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    
+    <script>
+        // METODO MODIFICAR
+        function Modificar(){
+            // Recopilamos la informacion de los objetos de HTML
+            var nombre = document.querySelector('#nombre').value
+            var apellido = document.querySelector('#apellido').value
+            var edad = document.querySelector('#edad').value
+            var objeto = {
+                'nombre': nombre,
+                'apellido': apellido,
+                'edad': edad
+            }
+            console.log(objeto)
+
+            // La estructura del fetch no cambia, solo la URL donde consume la API y el method.
+            fetch(`http://localhost:3000/Personas/${nombre}`, {
+            method: 'PUT',
+            body: JSON.stringify(objeto),
+            headers:{
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',}})
+            .then(res => res.json())
+            .catch(err => {
+                console.error('Error:', err)
+                alert("Ocurrio un error, ver la consola")
+            })
+            .then(response =>{
+                console.log(response);
+                alert(response.Mensaje)
+            })
+        }
+
+        // METODO ELIMINAR
+        function Eliminar(){
+            var nombre = document.querySelector('#nombre').value
+            
+            fetch(`http://localhost:3000/Personas/${nombre}`, {
+            method: 'DELETE',
+            headers:{
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',}})
+            .then(res => res.json())
+            .catch(err => {
+                console.error('Error:', err)
+                alert("Ocurrio un error, ver la consola")
+            })
+            .then(response =>{
+                console.log(response);
+                alert(response.Mensaje)
+                Regresar()
+            })
+        }
+
+        // METODO OBTENER UN DATO
+        function ObtenerDatos(){ 
+            var usuario = sessionStorage.buscar          
+            fetch(`http://localhost:3000/Personas/${usuario}`, {
+            method: 'GET',
+            headers:{
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',}})
+            .then(res => res.json())
+            .catch(err => {
+                console.error('Error:', err)
+                alert("Ocurrio un error, ver la consola")
+            })
+            .then(response =>{
+                console.log(response)
+                document.querySelector('#nombre').value = response.Nombre
+                document.querySelector('#apellido').value = response.Apellido
+                document.querySelector('#edad').value = response.Edad
+                
+            })
+        }
+        
+        function Regresar(){
+            location.href = "Pagina.html"
+        }
+    </script>        
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
