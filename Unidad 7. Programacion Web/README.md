@@ -79,7 +79,7 @@ _Una vez que hemos trabajado con los entornos del backend, podemos migrarnos al 
 		- Documentacion: https://getbootstrap.com/
 	- Aplicacion Frontend
 		- Plantilla Bootstrap
-		- Contenedores <div>
+		- Contenedores "div"
 			- Cambiar tamaño
 			- Cambiar posicion
 			- Agregar un espaciado
@@ -89,10 +89,77 @@ _Una vez que hemos trabajado con los entornos del backend, podemos migrarnos al 
 			- Agregar funciones
 		- Tablas
 			- Cargar informacion desde un metodo
-		- Etiqueta <script>
+		- Etiqueta "script"
 			- Crear Metodos
 			- Asignar metodos
 			- Metodos con parametros
 			- Redireccionar paginas
 			- sessionStorage
 		
+
+_Fecha: 20/04/2021_
+
+## Clase 15 - Cloud Computing - Horario de Laboratorio
+
+_Con los entornos de trabajo ya definimos, tanto el backend como el frontend, ya podemos proseguir a subirlo a un servidor de nube, actualmente existen muchos servidores de nubes, entre ellos tenemos **AWS** y **Google Cloud Platform** pero la desventaja es que son de pago y necesitamos una tarjeta de credito para acceder a ellos, sin embargo existen servidores de nube que cuentan con una capa gratuita entre ellos esta **Heroku** que es la que se utilizara para levantar nuestras aplicaciones **backend** y **frontend**._
+
+**Grabacion de la clase:** https://drive.google.com/file/d/1IOJVDV_OwQLLIIDDJYsrThjAgTLP2VQ8/view?usp=sharing
+
+
+### Contenido 📋
+
+- Cloud Computing
+	- Que es
+	- Caracteristicas
+	- Ventajas y Desventadas
+	- Tipos de Modelos
+		- IAAS
+		- PAAS
+		- SAAS
+	- Proveedores de nube
+		- AWS
+		- Google Cloud
+		- Azure
+- Git
+	- Que es
+	- Comandos basicos
+		- Git Clone
+		- Git add
+		- Git commit
+		- Git push
+		- Git pull
+	- Subir los proyectos desde la terminal
+- GitHub
+	- Repositorios
+	- Como crear un repositorio
+	- El archivo README
+- Heroku
+	- Como funciona Heroku
+	- Conectar Heroku - Repositorio Github
+	- Despliegue automatico
+		- Tomar los cambios del Repositorio
+	- Despliegue manual de las aplicaciones
+	- Visualizar aplicaciones
+- Backend
+	- Gunicorn: Levanta el servidor haciendo replicas en varios puertos.
+		- pip install gunicorn
+	- Freeze: Obtener los requerimientos de la app
+		- pip install freeze
+		- pip freeze > requirements
+	- Creacion del Procfile
+		- Levantarlo con gunicorn
+			- web: gunicorn -w 1 main:app 
+				- -w 1 para indicarle que solo levante una vez el servidor
+				- main:app donde main es el nombre de mi archivo py
+		- Si ustedes quieren pueden correr el python normal y deberia de funcionar
+			- python main.py
+- Frontend
+	- Consumir el backend de Heroku
+		- Cambiar la IP de **localhost** a la de heroku
+	- Crear archivo php
+		- index.php
+			- <?php include_once("Pagina.html"); ?>  
+			- Pagina.html: hace referencia a mi pagina principal
+		
+#### Recomendaciones
+La decision de la nube a utilizar fue de cada auxiliar, entonces en mi caso utilizamos **Heroku** pero pueden averiguar con otros auxiliares que nube utilizaron y si les pueden compartir la grabacion para saber como funcionan las nubes que van a implementar, por ejemplo Abner creo que usaria **AWS**, en la seccion A tambien usaran **AWS** con la cuenta de estudiante, esto es por si ustedes quieren saber un poco mas del mundo del cloud.
