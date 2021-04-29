@@ -158,7 +158,7 @@ _Con los entornos de trabajo ya definimos, tanto el backend como el frontend, ya
 		- Cambiar la IP de **localhost** a la de heroku
 	- Crear archivo php
 		- index.php
-			- "<?php include_once("Pagina.html"); ?> "
+			- '?php include_once("Pagina.html"); ?'
 			- Pagina.html: hace referencia a mi pagina principal
 		
 #### Recomendaciones
