@@ -163,3 +163,34 @@ _Con los entornos de trabajo ya definimos, tanto el backend como el frontend, ya
 		
 #### Recomendaciones
 La decision de la nube a utilizar fue de cada auxiliar, entonces en mi caso utilizamos **Heroku** pero pueden averiguar con otros auxiliares que nube utilizaron y si les pueden compartir la grabacion para saber como funcionan las nubes que van a implementar, por ejemplo Abner creo que usaria **AWS**, en la seccion A tambien usaran **AWS** con la cuenta de estudiante, esto es por si ustedes quieren saber un poco mas del mundo del cloud.
+
+_Fecha: 27/04/2021_
+
+## Clase 16 - Arreglos en Javascript - Horario de Laboratorio
+
+_Puesto que los temas relacionados al proyecto se concluyeron con la clase anterior, lo unico que quedaba era hacer un repaso de lo que se ha estado trabajando, entre las funcionalidades de la pagina, existe la opcion de que se debe guardar informacion de una entidad dentro de otra entidad, para eso manejamos lo que son arreglos y los objetos JSON nos da la facilidad de guardar arreglos dentro de arreglos, entonces con esta base, decidimos hacer un ejemplo en el cual un **entrenador** tenga un arreglo para manejar sus **Pokemon** y la manera de trabajarlo tanto en el backend como en el frontend._
+
+**Grabacion de la clase:** https://drive.google.com/file/d/1uciwNA7AJW_4CPy31RRA0LiFR-qM2vpo/view?usp=sharing
+
+
+### Contenido 📋
+
+- Backend
+	- Arreglos
+	- Un arreglo dentro de un objeto
+		- Arreglos []
+		- Arreglos de Objetos
+	- Almacenar el arreglo
+	- Retornar el objeto
+- Frontend
+	- Variables globales
+	- Arreglos
+	- Manejo de datos en arreglos
+		- Push
+		- Pop
+		- Shift
+		- Unshift
+	- Recorrer arreglos
+		- foreach
+		- map
+	- Construir un arreglo de JSONs

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 
+        Exportamos el boostrap desde un cdn, esto quiere decir que esta publicado en internet y no necesitamos el archivo local. 
+        La unica desventaja es que si no tenemos acceso a internet, no podremos acceder al archivo.
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Clase 15</title>
+  </head>
+    <!-- 
+    RECORDATORIO: onload nos sirve para ejecutar un metodo cuando se cargue el componente.
+    -->
+  <body onload="ObtenerDatos()">
+    <h1>Clase 15</h1>
+    <form>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre">
+        </div>
+            <!-- 
+            RECORDATORIO: De la forma que trabajamos, todos los botones deben de ser tipo button y 
+            manejar un metodo en su propiedad onClick.
+            -->
+        <button type="button" onClick="guardar()" class="btn btn-primary">Agregar</button>
+      </form>
+      <br/>
+      <div>
+        <table class="table table-striped">
+            <thead>
+                <tr class="table-dark">
+                    <th> Codigo </th>
+                    <th> Nombre </th>
+                    <th> Tipo </th>
+                    <th> Acciones </th>
+                </tr>
+            </thead>
+            <tbody id="detalles"></tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script>
+    /* MANEJANDO ARREGLOS DE UNA MANERA "GLOBAL"
+        Los arreglos son propios de cada lenguaje, en este caso un arreglo en javascript se representa con un []
+        Y para trabajar las variables de manera global, lo unico que debemos de hacer es declararla en el script
+        fuera de cualquier metodo que estemos trabajando.
+    */
+      var Pokemon = []
+
+        // METODO NORMAL PARA OBTENER LOS DATOS DEL POKEMON
+      function ObtenerDatos(){
+        var tabla = document.querySelector('#detalles')
+            var cadena = ''
+            fetch('http://localhost:3000/Pokemon', {
+            method: 'GET',
+            headers:{
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',}})
+            .then(res => res.json())
+            .catch(err => {
+                console.error('Error:', err)
+                alert("Ocurrio un error, ver la consola")
+            })
+            .then(response =>{
+                console.log(response);
+                response.forEach(element => {
+                    console.log(element)
+                    cadena += `<tr>
+                        <td> ${element.codigo} </td>
+                        <td> ${element.nombre} </td>
+                        <td> ${element.tipo} </td>
+                        <td> <button value=${element.codigo} onclick="agregar(this)" type="button" class="btn btn-outline-dark">Agregar</button> </td>
+                        </tr>`         
+                });
+                // En este caso, nuestor boton solo se encargar de agregar la informacion al arreglo global
+                tabla.innerHTML = cadena
+            })
+        }
+
+        // METODO PARA GUARDAR LA INFORMACION EN EL ARREGLO
+      function agregar(boton){
+          var id = boton.value;
+          // Por decision personal, yo decidi que dentro de mi arreglo voy a almacenar toda la informacion del Pokemon
+          // Esto depende del programador, si uno quisiera puede guardar unicamente los codigos para hacer referencia
+          // Queda a discresion de ustedes.
+          fetch(`http://localhost:3000/${id}`, {
+            method: 'GET',
+            headers:{
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',}})
+            .then(res => res.json())
+            .catch(err => {
+                console.error('Error:', err)
+                alert("Ocurrio un error, ver la consola")
+            })
+            .then(response =>{
+                // En este caso, obtuve toda la informacion mi pokemon y esta en un json, lo que en javascript es un {}
+                // Y lo unico que hago es hacerle Push a mi arreglo global
+
+                // PUSH: Almacenar el dato hasta el final del arreglo.
+                Pokemon.push(response);
+                console.log(Pokemon)
+            })
+        }
+
+      function guardar(){
+            // Por la forma del ejemplo, estamos guardando entrenadores con un arreglo que obtendra la informacion del Pokemon
+            var nombre = document.querySelector('#nombre').value
+            // Por lo tanto, mi objeto unicamente tiene nombre y pokemon, donde pokemon es un [] con objetos {} dentro.
+            // Y es asi como le dijimos al backend que lo vamos a trabajar
+
+            // RECORDATORIO: Si quisieramos guardarlo como un objeto, cuando almacenemos la informacion debemos de convertir nuestro
+            // arreglo con objetos {} a un arreglo con el objeto que definimos en el backend.
+            var objeto = {
+                'nombre': nombre,
+                'pokemons': Pokemon
+            }
+
+            console.log(objeto)
+            fetch('http://localhost:3000/Entrenador', {
+            method: 'POST',
+            body: JSON.stringify(objeto),
+            headers:{
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',}})
+            .then(res => res.json())
+            .catch(err => {
+                console.error('Error:', err)
+                alert("Ocurrio un error, ver la consola")
+            })
+            .then(response =>{
+                console.log(response);
+                alert(response.Mensaje)
+                // En este caso como terminamos de almacenar la informacion, solo limpiamos nuestro arreglo []
+                Pokemon = []
+            })
+        }
+    </script>
+  </body>
+</html>
