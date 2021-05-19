@@ -2,6 +2,9 @@
 
 _Este apartado es especificamente para las tareas que se dejaron en el curso, estas se publicaran despues de la fecha de entrega para que los alumnos que tuvieron duda, puedan ver en que mejorar teniendo una base de como se hacia_
 
+** Solo se subieron las primeras actividades, pues son las que mas "dificultad" presenta para el estudiante cuando esta iniciando.**
+
+
 ### Recomendaciones
 - Traten de entender el codigo y averiguar como funciona.
 - Lean los comentarios las veces necesarias, pero aprendan bien como funciona.

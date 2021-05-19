@@ -17,4 +17,5 @@ _La idea es que todos los ejemplos vistos en laboratorios sean subidos en este r
 - No solo copiar y pegar >:) 
 - Traten de entender el codigo y averiguar como funciona.
 - Sin miedo al exito, todo es posible si le echan ganas.
-- Dale vieja dale
+- Si no tienen idea de como comenzar, las lecturas pueden ser de mucha ayuda.
+	- Estan los libros "principales" para aprender JAVA.
