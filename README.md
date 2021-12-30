@@ -22,3 +22,13 @@ _La idea es que todos los ejemplos vistos en laboratorios sean subidos en este r
 
 ### Contacto
 - carlosrjp14@gmail.com
+
+## Practicas Iniciales e Intermedias
+
+_Tambien tuve el gusto de apoyar en los cursos de **Practicas Iniciales** y **Practicas Intermedias** con el Ing. Sergio Gomez, mi objetivo para estos cursos era orientar a los estudiantes a utilizar las tecnologias que en su momento a mi se me complicaron a lo largo de la carrera y para que al llegar a dichos cursos, no los agarren de sorpresa o bien, ya tenian una referencia. Les comparto los enunciados y a que van orientados_
+
+- **Iniciales**: Este proyecto va orientado en el desarrollo web, haciendo uso de Frameworks para el desarrollo formal de una aplicación web, en el enunciado pueden encontrar varios enlaces que seguramente, les servira de ayuda.
+	- https://docs.google.com/document/d/1xR8--h7yZq1B764nX76PiGTJfHpFMP9V4tPxlZnCA4A/edit?usp=sharing
+
+- **Intermedias**: Con un conjunto de cursos más avanzados, los estudiantes ya manejan en su mayoria los conceptos de programación web y para este punto no se les puede enseñar mas de lo que ya saben, el proyecto se basa en introducirlos a los conceptos de **CI/CD, Integración y Despliegue continuo** siendo estos tecnicas o herramientas para el desarrollo de un proyecto.
+	- https://docs.google.com/document/d/1Fwm0YsqApzmLL9eKYe0f0IPCpMxKvUy9RFqLN64v6lQ/edit?usp=sharing
